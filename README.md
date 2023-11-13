@@ -55,4 +55,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 # TODO
 
-Add colors gradient for peppers => purple, red, orange, yellow, green
+- Add colors gradient for peppers => purple, red, orange, yellow, green
+- Figure out function to compare scoville across peppers and order
+  - Use this number to fill in the meter
+

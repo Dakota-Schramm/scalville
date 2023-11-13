@@ -1,14 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const peppers = await Astro.glob('./peppers/*.md');
 ---
 
 <Layout title="Scalville">
 	<h1 class="text-3xl rotate-6 from-green-500 to-red-600 bg-gradient-to-r title">Scalville</h1>
 	<main class="text-white">
 		<div class="flex justify-center mx-auto">
-			<section>
-				<p>Example text</p>
-				<a href="/peppers/jalapeno">Jalapeno</a>
+			<section class="flex flex-col">
+				peppers.map(p => (
+					<a href={p.url}>{p.frontmatter.title}</a>
+				))}
 			</section>
 			<meter class="rotate-90"></meter>
 		</div>
